@@ -1,0 +1,40 @@
+body { background-color: rgb(182, 173, 173);
+    min-height: 40vh; }
+
+.grid-container{display: grid;
+            width: 100%;
+            background-color: rgb(207, 202, 202);
+            grid-template-columns: auto auto 7rem;
+
+            justify-content: space-betwen;}
+
+.item1 {font-size: 6vh;
+    color:black;}
+
+.item3 {align-self: start;}
+
+.nav-container {display:grid;
+            width: 100%;
+            background-color: rgb(152, 147, 173);
+            justify-content: space-around;
+            grid-template-rows: 5rem;
+            grid-template-columns: auto auto auto auto; }
+
+.links{ align-self:center;
+    color: black;
+    font-size:3vh}
+
+
+.paragraph {width: 50rem;
+        height: 600px;
+        margin: 10vh auto 0 auto;
+        text-align: center;
+        font-family: 'Arial Narrow Bold', sans-serif ;
+        font-size: 3vh;
+        color: rgb(77, 76, 76);} 
+
+
+.product {
+    text-align: center;
+    margin: auto 10vh auto 10vh;
+}
