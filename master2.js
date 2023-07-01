@@ -1,10 +1,56 @@
 // Array de productos
-const productos = [
-    { id: 1, tipo: "liquidos de limpieza", precio: 10000 },
-    { id: 2, tipo: "productos toxic", precio: 20000 },
-    { id: 3, tipo: "kit Paños", precio: 10000 },
-    { id: 4, tipo: "kit Cepillos", precio: 20000 }
-  ];
+const productos = [];
+
+
+// jason de prod
+async function ObtenerProd(){
+const respuesta= await fetch("./data.json")
+.then((res)=>res.json())
+.then((data)=>{
+    data.forEach((prod)=>{
+      productos.push(prod);
+      console.log(prod)
+    })
+})}
+
+ObtenerProd();
+
+const card = document.querySelector(".product");
+console.log(card);
+
+// creacion div*cards
+fetch("./data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((prod) => {
+      
+
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <div>
+          <div class="card" id="${prod.tipo}" style="width: 18rem;">
+            <img src="${prod.img}" class="card-img-top" alt="liquidos-limpieza">
+            <div class="card-body">
+              <h5 class="card-title">${prod.tipo}</h5>
+              <p class="card-text">${prod.descripcion}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Precio: $${prod.precio}</li>
+            </ul>
+            <div class="card-body">
+              <button type="button" class="btn btn-success" id="${prod.tipo}">agregar carrito</button>
+            </div>
+          </div>
+        </div>
+      `;
+      card.appendChild(li);
+      // Agregar event listener al botón "Agregar carrito"
+      const agregarCarritoBtn = document.getElementById(prod.tipo);
+      agregarCarritoBtn.addEventListener('click', () => {
+        agregarAlCarrito(prod);});
+    });
+  });
+
 
   
 
@@ -16,7 +62,7 @@ const productos = [
 
 
     // Verificar si el producto ya está en el carrito
-    const productoExistente = carrito.find(item => item.id === producto.id);
+    const productoExistente = carrito.find(item => item.tipo === producto.tipo);
     if (productoExistente) {
       // Incrementar la cantidad si el producto ya existe en el carrito
       productoExistente.cantidad++;
@@ -87,23 +133,12 @@ const productos = [
     carritoDiv.appendChild(totalDiv);
   }
   
-  // Asignar los listeners de click a los botones de agregar al carrito
-  document.getElementById('liquidos').addEventListener('click', () => {
-    agregarAlCarrito(productos[0]);
-  });
   
-  document.getElementById('toxic').addEventListener('click', () => {
-    agregarAlCarrito(productos[1]);
-  });
   
-  document.getElementById('paños').addEventListener('click', () => {
-    agregarAlCarrito(productos[2]);
-  });
-  
-  document.getElementById('cepillos').addEventListener('click', () => {
-    agregarAlCarrito(productos[3]);
-  });
-  
+
+
+
+
   // Actualizar el contenido del carrito al cargar la página
   actualizarCarrito();
   
@@ -146,3 +181,5 @@ const productos = [
           actualizarCarrito();
         }
       }
+
+      

@@ -21,6 +21,7 @@
     <div class="item1"> <a href="../index.html">Tu Auto</a></div>
     <div class="item2"><img src="../img/62791039_6.jpg" alt="Lambo" style="width: 100%;"></div>
     <div class="item3"><button class="favorite styled" type="button">Iniciar sesion</button></div>
+    
   </div>
 
   <!-- navbar -->
@@ -38,9 +39,12 @@
             <li class="nav-item">
               <a class="nav-link" href="./index.html">Service</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" >
               <a class="nav-link" href="Productos.html">Productos</a>
             </li>
+            <li class="nav-item"><form>
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </form></li>
           </ul>
         </div>
       </div>
@@ -49,66 +53,9 @@
 
 <div class="product">
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="card" style="width: 18rem;">
-      <img src="../img/kit liquidos.webp" class="card-img-top" alt="liquidos-limpieza">
-      <div class="card-body">
-        <h5 class="card-title">kit productos liquido</h5>
-        <p class="card-text">Este kit incluye, shampoo, revividor de plastico, caucho, silicona con fragancia a eleccion</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Precio $10000</li>
-      </ul>
-      <div class="card-body">
-        <button type="button" class="btn btn-success" id="liquidos">agregar carrito</button>
-        
-        
-      </div>
-    </div>
     
-    <div class="card" style="width: 18rem;">
-      <img src="../img/toxic.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Prodcutos Toxic</h5>
-        <p class="card-text">Este kit incluye shampoo, humectante y protector de plasticos, caucho y un descontaminador</p>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Precio: $20000</li>
-      </ul>
-      <div class="card-body">
-        <button type="button" class="btn btn-success" id="toxic">agregar carrito</button>
-                
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="../img/kit paños micro.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">kit Paños</h5>
-        <p class="card-text">Este kit incluye 5 paños de microfibra, esponja, cepillo de microfibra, y un pad aplicador</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Precio: $10000</li>
-      </ul>
-      
-      <div class="card-body">
-        <button type="button" class="btn btn-success" id="paños">agregar carrito</button>
-                
-      </div>
-    </div>
     
-    <div class="card" style="width: 18rem;">
-      <img src="../img\kit cepillos.webp" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">kit cepillos</h5>
-        <p class="card-text">Este kit incluye un set de cepillos de mano, cepillo alfombra maquina, cepillo grande ext. maquina, pad y cepillos chicos</p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Precio: $20000</li>
-      </ul>
-      
-      <div class="card-body">
-        <button type="button" class="btn btn-success" id="cepillos">agregar carrito</button>
-        
-      </div>
     </div>
 
     <div id="carritoCompras" class="card" style="width: 18rem;">
@@ -129,6 +76,7 @@
 
   
   <script src="../master2.js"></script>
+  <script src="./data.json"></script>
 </body>
 
 <footer>

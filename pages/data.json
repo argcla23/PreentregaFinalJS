@@ -1,0 +1,6 @@
+[
+    { "img": "../img/kit liquidos.webp" , "id": 1, "tipo": "liquidos de limpieza", "precio": 10000, "descripcion" : "Este kit incluye, shampoo, revividor de plastico, caucho, silicona con fragancia a eleccion" },
+    { "img": "../img/toxic.webp", "id": 2, "tipo": "productos toxic", "precio": 20000, "descripcion" : "Este kit incluye shampoo, humectante y protector de plasticos, caucho y un descontaminador"},
+    { "img": "../img/kit paños micro.webp" , "id": 3, "tipo": "kit Paños", "precio": 10000, "descripcion": "Este kit incluye 5 paños de microfibra, esponja, cepillo de microfibra, y un pad aplicador"},
+    { "img": "../img/kit cepillos.webp" , "id": 4, "tipo": "kit Cepillos", "precio": 20000, "descripcion": "Este kit incluye un set de cepillos de mano, cepillo alfombra maquina, cepillo grande ext. maquina, pad y cepillos chicos" }
+  ]
