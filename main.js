@@ -49,7 +49,7 @@ function mostrarServicios() {
     const div = document.createElement('div');
 
     div.innerHTML = ` 
-          <p>${"Service:" + el.service}</p>
+          <p>${"Service:" + el.Service}</p>
           <p>${"Kilometraje:" + el.kilometraje}</p>
           <p>${"Tareas:" + el.tareas}</p>
           <p>${"Observaciones:" + el.observaciones}</p>
