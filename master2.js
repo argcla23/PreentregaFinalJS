@@ -15,7 +15,7 @@ const respuesta= await fetch("./data.json")
 
 ObtenerProd();
 
-const card = document.querySelector(".product");
+const card = document.querySelector("#product");
 console.log(card);
 
 // creacion div*cards
@@ -25,10 +25,10 @@ fetch("./data.json")
     data.forEach((prod) => {
       
 
-      const li = document.createElement('li');
-      li.innerHTML = `
-        <div>
-          <div class="card" id="${prod.tipo}" style="width: 18rem;">
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <divclass= "col" style ="max-widht: 18 rem">
+          <div class="card" id="${prod.tipo}" style="max-width: 18rem;">
             <img src="${prod.img}" class="card-img-top" alt="liquidos-limpieza">
             <div class="card-body">
               <h5 class="card-title">${prod.tipo}</h5>
@@ -43,11 +43,16 @@ fetch("./data.json")
           </div>
         </div>
       `;
-      card.appendChild(li);
+      card.appendChild(div);
       // Agregar event listener al botón "Agregar carrito"
       const agregarCarritoBtn = document.getElementById(prod.tipo);
       agregarCarritoBtn.addEventListener('click', () => {
-        agregarAlCarrito(prod);});
+        agregarAlCarrito(prod);
+        Swal.fire(
+          'Agregaste este producto!',
+          'continua con tu compra!',
+          'success'
+        )});
     });
   });
 
@@ -182,4 +187,12 @@ fetch("./data.json")
         }
       }
 
-      
+       document.getElementById('buy').addEventListener('click', ()=>{
+        Swal.fire(
+          'Gracias por tu compra!',
+          'Nos podremos en contacto para finalizar la operación',
+          'success')
+
+       })
+          
+  

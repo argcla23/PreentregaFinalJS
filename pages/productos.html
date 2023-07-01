@@ -7,9 +7,9 @@
   <meta name="description" content="Cuidemos nuestros autos">
   <meta name="keywords" content="Autos, Service, cuidado, garage">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="sweetalert2.min.js"></script> -->
-<!-- <link rel="stylesheet" href="sweetalert2.min.css"> -->
+  <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css
+" rel="stylesheet">
   <link rel="stylesheet" href="../style/style.css">
   <title>Bootstrap demo</title>
 </head>
@@ -37,7 +37,7 @@
           <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: auto;">
                          
             <li class="nav-item">
-              <a class="nav-link" href="./index.html">Service</a>
+              <a class="nav-link" href="../index.html">Service</a>
             </li>
             <li class="nav-item" >
               <a class="nav-link" href="Productos.html">Productos</a>
@@ -51,10 +51,8 @@
     </nav>
   </nav>
 
-<div class="product">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    
-      </div>
+  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-1" id="product">
+
     
     </div>
 
@@ -66,6 +64,7 @@
           
 
         </div>
+        <button type="button" class="btn btn-success" id="buy">Comprar</button>
         <button type="button" class="btn btn-danger" id="clear">Vaciar Carrito</button>
        </div>
 </div>
@@ -73,7 +72,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
-
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js
+    "></script>
   
   <script src="../master2.js"></script>
   <script src="./data.json"></script>
