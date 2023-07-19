@@ -9,14 +9,14 @@ const respuesta= await fetch("./data.json")
 .then((data)=>{
     data.forEach((prod)=>{
       productos.push(prod);
-      console.log(prod)
+      
     })
 })}
 
 ObtenerProd();
 
 const card = document.querySelector("#product");
-console.log(card);
+
 
 // creacion div*cards
 fetch("./data.json")
