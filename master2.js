@@ -15,7 +15,7 @@ const respuesta= await fetch("./data.json")
 
 ObtenerProd();
 
-const card = document.querySelector("#product");
+let card = document.querySelector("#product");
 
 
 // creacion div*cards
@@ -27,9 +27,9 @@ fetch("./data.json")
 
       const div = document.createElement('div');
       div.innerHTML = `
-        <divclass= "col" style ="max-widht: 18 rem">
-          <div class="card" id="${prod.tipo}" style="max-width: 18rem;">
-            <img src="${prod.img}" class="card-img-top" alt="liquidos-limpieza">
+        <divclass= "col" >
+          <div class="card" id="${prod.tipo}" >
+            <img src="${prod.img}"  class="card-img-top" alt="liquidos-limpieza">
             <div class="card-body">
               <h5 class="card-title">${prod.tipo}</h5>
               <p class="card-text">${prod.descripcion}</p>
@@ -194,5 +194,61 @@ fetch("./data.json")
           'success')
 
        })
-          
+
+
+
   
+const lupa = document.getElementById('search');
+
+lupa.addEventListener('click', () => {
+  const inputForm = document.getElementById('inputValue').value.trim(); 
+  
+ 
+
+  function updateValue() {
+    const filteredProduct = productos.find(prod => prod.tipo === inputForm);
+
+    if (filteredProduct) {
+      Swal.fire({
+        title: filteredProduct.tipo,
+        text: filteredProduct.descripcion,
+        imageUrl: filteredProduct.img,
+        imageAlt: filteredProduct.tipo,
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Continuar con la compra!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Producto agregado al carrito!',
+            'continua con tu compra!',
+            'success'
+          );
+          agregarAlCarrito(filteredProduct);
+        }
+      });
+    } else {
+      Swal.fire(
+        'Producto no encontrado!',
+        'Por favor, ingresa un producto válido.',
+        'error'
+      );
+    }
+  }
+
+  updateValue(); 
+});
+
+const hola = document.getElementById('hola')
+
+const login = document.getElementById('log')
+
+login.addEventListener('click',()=> {
+
+  
+  const welcome = document.createElement('div');
+  welcome.textContent = `Bienvenido`;
+  hola.appendChild(welcome);}
+
+)

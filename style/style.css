@@ -53,8 +53,11 @@ body { background-color: rgb(182, 173, 173);
 
 .product {
     text-align: center;
+    max-width: max-content;
     margin: auto 10vh auto 10vh;
 }
+
+
 
 /* footer */
 .container {

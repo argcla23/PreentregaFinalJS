@@ -27,10 +27,10 @@ function respuestaClick(e) {
 
   }
 
-  console.log(newService);
+ 
   arrayServicios.push(newService);
 
-  console.log(arrayServicios);
+ 
 
   localStorage.setItem('servicios', JSON.stringify(arrayServicios));
 
@@ -56,3 +56,17 @@ function mostrarServicios() {
         `
     contenedor.appendChild(div)})
 }
+
+
+const hola = document.getElementById('hola')
+
+const login = document.getElementById('log')
+
+login.addEventListener('click',()=> {
+
+  
+  const welcome = document.createElement('div');
+  welcome.textContent = `Bienvenido`;
+  hola.appendChild(welcome);}
+
+)
