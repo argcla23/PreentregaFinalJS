@@ -29,7 +29,7 @@ fetch("./data.json")
       div.innerHTML = `
         <divclass= "col" style ="max-widht: 18 rem">
           <div class="card" id="${prod.tipo}" style="max-width: 18rem;">
-           
+            <img src="${prod.img}" class="card-img-top" alt="liquidos-limpieza">
             <div class="card-body">
               <h5 class="card-title">${prod.tipo}</h5>
               <p class="card-text">${prod.descripcion}</p>
